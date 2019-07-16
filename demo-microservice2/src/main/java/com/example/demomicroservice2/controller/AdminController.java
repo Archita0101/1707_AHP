@@ -613,6 +613,14 @@ public class AdminController {
 			 * System.out.println("roundId>>>" + roundReference.getRoundId());
 			 */
 			Round roundNew = roundService.getRoundById(round.getRoundId());
+			roundNew.setRoundStatus(round.getRoundStatus());
+			 roundNew.setRoundName(round.getRoundName());
+			 roundNew.setStartDate(round.getStartDate());
+			 roundNew.setRetentionPeriod(round.getRetentionPeriod());
+			 roundNew.setProgressCredence(round.getProgressCredence());
+			 roundNew.setOwnerOccupiedRetentionPeriod(round.getOwnerOccupiedRetentionPeriod());
+			 roundNew.setEndDate(round.getEndDate());
+			 roundNew.setActivities(round.getActivities());
 			activity.setRound(roundNew);
 			//if (i ==0 ) { roundService.editRound(roundReference); } i = i + 1;
 			 
@@ -723,7 +731,7 @@ public class AdminController {
 				activityContext.setQuestionType(questionTypeRepository.findById(2).get());
 				for (Question question : activityContext.getQuestion()) {
 					question.setAdditionalButton("TestAdditionalButton");
-					question.setAnswerFieldType("select");
+					//question.setAnswerFieldType("select");
 					question.setIsRuleApplicable("false");
 					question.setOptionsValue("YES:NO");
 					question.setVisibleButton(true);
@@ -745,7 +753,7 @@ public class AdminController {
 				activityContext.setQuestionType(questionTypeRepository.findById(1).get());
 				for (Question question : activityContext.getQuestion()) {
 					question.setAdditionalButton("TestAdditionalButton");
-					question.setAnswerFieldType("select");
+					//question.setAnswerFieldType("select");
 					question.setIsRuleApplicable("false");
 					question.setOptionsValue("YES:NO");
 					question.setVisibleButton(true);
@@ -777,7 +785,7 @@ public class AdminController {
 				activityContext.setQuestionType(questionTypeRepository.findById(2).get());
 				for (Question question : activityContext.getQuestion()) {
 					question.setAdditionalButton("TestAdditionalButton");
-					question.setAnswerFieldType("select");
+					//question.setAnswerFieldType("select");
 					question.setIsRuleApplicable("false");
 					question.setOptionsValue("YES:NO");
 					question.setVisibleButton(true);
@@ -799,7 +807,7 @@ public class AdminController {
 				activityContext.setQuestionType(questionTypeRepository.findById(1).get());
 				for (Question question : activityContext.getQuestion()) {
 					question.setAdditionalButton("TestAdditionalButton");
-					question.setAnswerFieldType("select");
+					//question.setAnswerFieldType("select");
 					question.setIsRuleApplicable("false");
 					question.setOptionsValue("YES:NO");
 					question.setVisibleButton(true);
